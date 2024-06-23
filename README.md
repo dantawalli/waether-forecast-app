@@ -1,2 +1,2 @@
 # waether-forecast-app
-Internsha weather forecast app
+Internshala weather forecast app
