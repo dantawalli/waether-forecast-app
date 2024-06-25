@@ -10,7 +10,7 @@ locationBtn.addEventListener("click", getUserCoordinates);
 city.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
 
 /*==================== OpenWeatherMap API Key ====================*/
-const apiKey = "57ab3274308233ab874a167f5160fad2";
+const apiKey = "YOUR_API_KEY_HERE";
 
 
 /*==================== Weather Card  ====================*/
