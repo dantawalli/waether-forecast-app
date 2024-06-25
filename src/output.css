@@ -770,6 +770,22 @@ video {
   margin-right: 2.25rem;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
 .block {
   display: block;
 }
@@ -870,6 +886,10 @@ video {
   flex-basis: 75%;
 }
 
+.basis-2\/4 {
+  flex-basis: 50%;
+}
+
 .origin-top-right {
   transform-origin: top right;
 }
@@ -930,6 +950,10 @@ video {
   justify-content: space-evenly;
 }
 
+.justify-items-end {
+  justify-items: end;
+}
+
 .justify-items-center {
   justify-items: center;
 }
@@ -964,9 +988,18 @@ video {
   border-top-width: 1px;
 }
 
+.border-r-4 {
+  border-right-width: 4px;
+}
+
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
+.border-violet-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(124 58 237 / var(--tw-border-opacity));
 }
 
 .bg-gray-100 {
@@ -1106,6 +1139,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .text-left {
@@ -1257,6 +1294,10 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1324,12 +1365,20 @@ video {
     margin-left: 0px;
   }
 
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
   .sm\:grow {
     flex-grow: 1;
   }
 
   .sm\:basis-2\/4 {
     flex-basis: 50%;
+  }
+
+  .sm\:basis-1\/4 {
+    flex-basis: 25%;
   }
 
   .sm\:flex-row {
@@ -1396,6 +1445,14 @@ video {
     display: none;
   }
 
+  .md\:basis-2\/4 {
+    flex-basis: 50%;
+  }
+
+  .md\:basis-1\/4 {
+    flex-basis: 25%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1406,6 +1463,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:basis-1\/4 {
+    flex-basis: 25%;
+  }
+
+  .lg\:basis-3\/4 {
+    flex-basis: 75%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }

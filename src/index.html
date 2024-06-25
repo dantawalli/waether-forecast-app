@@ -4,89 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast App</title>
+
+     <!--=============== CSS ===============-->
     <link href="./output.css" rel="stylesheet">
 </head>
 <body class="bg-violet-50">
 <div class="min-h-full">
-    <nav class="bg-violet-600 mb-3">
+   <!--==================== HEADER ====================-->
+    <header class="bg-violet-600 mb-3">
       <h1 class="text-3xl font-bold tracking-tight text-white p-4 text-center">Weather Dashboard</h1>
-    </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
     <main>
       <div class="flex flex-col sm:flex-row m-6">
         <div class="basis-1/4 flex flex-col text-center m-4">
             <h1 class="font-semibold text-left">Enter a City Name</h1>
-            <input type="text" name="searchBox" id="searchBox" class="h-10 p-6 my-2 mb-5" placeholder="E.g Delhi, London, New York, Mumbai">
-            <button class="bg-violet-600 p-3 text-white">Search</button>
-            <p class="mt-5">or</p>
-            <button class="bg-gray-500 p-3 text-white mt-4">Use Current Location</button>
+            <input type="text" name="searchBox" id="searchBox" class="h-10 p-6 my-2 mb-5 border-violet-600" placeholder="E.g Delhi, London, New York, Mumbai">
+            <button class="bg-violet-600 p-3 text-white" id="searchBtn">Search</button>
+            <p class="mt-2">or</p>
+            <button class="bg-gray-500 p-3 text-white mt-2 location-btn">Use Current Location</button>
         </div>
-        <div class="bg-violet-600 basis-3/4 p-8 text-violet-50 flex flex-col text-center sm:text-justify sm:flex-row justify-between shadow-sm m-4">
-          <div class="leading-8">
-            <h1 class="font-extrabold text-2xl">London(2024-06-24)</h1>
-            <p>Temperature: 7.06<sup>c</sup></p>
-            <p>Wind: 2.85 M/S</p>
-            <p>Humidity: 88%</p>
+        <div class="bg-violet-600 basis-3/4 p-8 text-violet-50 flex flex-col text-center sm:text-justify sm:flex-row justify-between shadow-sm m-4 current-weather">
+          <div class="leading-10">
+              <h1 class="font-extrabold text-2xl">______ ( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
           </div>
           <div>
-            <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-            <p>Light Rain</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="mx-auto"/>
+            <p class="text-center">Light Rain</p>
           </div>
         </div>
       </div>
       <div class="flex flex-col sm:flex-row m-6">
-        <div class="basis-1/4 flex flex-col text-center m-4">    
+        <div class="basis-2/4 flex flex-col text-center m-4 lg:basis-1/4"> 
+          <select id="recentSearches" class="mt-4 p-3 border-violet-600 hidden">
+            <option value="" disabled selected>Select a recent city</option>
+        </select> 
         </div>
-        <div class="basis-3/4">
+        <div class="basis-3/4 lg:basis-3/4">
           <h1 class="font-bold text-xl mb-2 text-center sm:text-left">5 days Forecast</h1>
-          <div class="flex flex-col grow gap-6 sm:flex-row flex-wrap">
+          <div class="flex flex-col grow gap-6 sm:flex-row sm:grow flex-wrap weather-cards">
             <div class="bg-gray-500 text-white p-8 text-center">
-              <h1>(2024-06-25)</h1>
-              <p>Temperature: 7.06<sup>c</sup></p>
-              <p>Wind: 2.85/M/S</p>
-              <p>Humidity: 88%</p>
-              <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-              <p>Light Rain</p>
+              <h1>( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
             </div>
 
             <div class="bg-gray-500 text-white p-8 text-center">
-              <h1>(2024-06-25)</h1>
-              <p>Temperature: 7.06<sup>c</sup></p>
-              <p>Wind: 2.85M/S</p>
-              <p>Humidity: 88%</p>
-              <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-              <p>Light Rain</p>
+              <h1>( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
             </div>
 
             <div class="bg-gray-500 text-white p-8 text-center">
-              <h1>(2024-06-25)</h1>
-              <p>Temperature: 7.06<sup>c</sup></p>
-              <p>Wind: 2.85M/S</p>
-              <p>Humidity: 88%</p>
-              <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-              <p>Light Rain</p>
+              <h1>( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
             </div>
 
             <div class="bg-gray-500 text-white p-8 text-center">
-              <h1>(2024-06-25)</h1>
-              <p>Temperature: 7.06<sup>c</sup></p>
-              <p>Wind: 2.85M/S</p>
-              <p>Humidity: 88%</p>
-              <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-              <p>Light Rain</p>
+              <h1>( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
             </div>
 
             <div class="bg-gray-500 text-white p-8 text-center">
-              <h1>(2024-06-25)</h1>
-              <p>Temperature: 7.06<sup>c</sup></p>
-              <p>Wind: 2.85M/S</p>
-              <p>Humidity: 88%</p>
-              <img src= "icons/cloudy.png" class="w-16 mx-auto"/>
-              <p>Light Rain</p>
+              <h1>( _______ )</h1>
+              <h4>Temp: __ <sup>o</sup>C</h4>
+              <h4>Wind: __ M/S</h4>
+              <h4>Humidity: __%</h4>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </main>  
   </div>  
+    <!--==================== JS ====================-->
+  <script src="index.js"></script>
 </body>
 </html>
